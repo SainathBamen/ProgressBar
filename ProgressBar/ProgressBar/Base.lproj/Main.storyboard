@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GQC-eW-Eap">
+                                <rect key="frame" x="16" y="383" width="358" height="3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="Ag4-Tk-09L"/>
+                                </constraints>
+                                <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" systemColor="systemTealColor"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loding..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDy-8N-ZVa">
+                                <rect key="frame" x="103" y="408" width="185" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLx-El-yHe">
+                                <rect key="frame" x="149" y="238" width="102" height="65"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="appleImage"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYU-cm-7Bk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JDy-8N-ZVa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Lh-1B-GQP"/>
+                            <constraint firstItem="GQC-eW-Eap" firstAttribute="centerX" secondItem="JDy-8N-ZVa" secondAttribute="centerX" id="AeA-qk-SN7"/>
+                            <constraint firstItem="qLx-El-yHe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="Dju-Nw-bb8"/>
+                            <constraint firstItem="qLx-El-yHe" firstAttribute="centerX" secondItem="GQC-eW-Eap" secondAttribute="centerX" id="Rj2-kc-zTy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JDy-8N-ZVa" secondAttribute="bottom" constant="373" id="a8i-KO-ljb"/>
+                            <constraint firstItem="JDy-8N-ZVa" firstAttribute="top" secondItem="GQC-eW-Eap" secondAttribute="bottom" constant="21" id="byV-DT-8lM"/>
+                            <constraint firstItem="GQC-eW-Eap" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ciU-rz-S0D"/>
+                            <constraint firstItem="JDy-8N-ZVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="coc-Cd-7gL"/>
+                            <constraint firstItem="GQC-eW-Eap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vWa-zd-Alv"/>
+                            <constraint firstItem="GQC-eW-Eap" firstAttribute="top" secondItem="qLx-El-yHe" secondAttribute="bottom" constant="27" id="vlt-Xu-n8k"/>
+                            <constraint firstItem="qLx-El-yHe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="xzf-5U-J5E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="GQC-eW-Eap" id="jWX-bp-cus"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appleImage" width="50" height="50"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
